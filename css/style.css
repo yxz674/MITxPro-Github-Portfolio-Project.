@@ -1,0 +1,236 @@
+/***************************************/
+/* General Setup */
+/***************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.4s linear;
+  text-transform: capitalize;
+  font-family: "Play", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+nav {
+  font-size: 1.2rem;
+}
+/***************************************/
+/* Main body's grid layout and flash cards display */
+/***************************************/
+.grid {
+  max-width: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("./images/photo-boards-KZNTEn2r6tw-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  height: 90vh;
+}
+.left-grid {
+  border-style: solid;
+  border-color: blue;
+  background-image: url("./images/pngkey.com-cool-glasses-png-810871.png");
+  background-position: bottom right;
+  background-size: 27%;
+  /* background-position: center;
+  background-size: cover; */
+  background-repeat: no-repeat;
+}
+.intro-one {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  border-style: solid;
+  border-color: blue;
+}
+.intro-one iframe {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 80%;
+  height: 80%;
+}
+.intro-two {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-left:20px;
+  font-size: 24px;
+  border-style: solid;
+  border-color: blue;
+  color: #fff1de;
+  line-height: 4rem;
+}
+
+.right-grid {
+  display: grid;
+  overflow-y: auto;
+  /* background-image: url("./images/jon-tyson-6YQEhak4vpU-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  border-style: solid;
+  border-color: blue;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  gap: 6rem;
+  padding: 2rem 2rem;
+}
+/* .right-title {
+  grid-area: 1/1/1/3;
+  This is how you create a sticky header for anything.
+  position: sticky;
+  top: 0;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: orangered;
+} */
+
+.right-grid .assignment {
+  background-color: #fff1de;
+  /* box-shadow: 0.5rem 1rem darkblue;
+  outline: 0.1rem solid white;
+  cursor: pointer; */
+  border-radius: 5%;
+  box-sizing: border-box;
+  height: clamp(250px, 450px, 600px);
+  color: black;
+  display: flex;
+}
+/* .right-grid .assignment:hover {
+  outline: 0.8rem solid yellow;
+} */
+/* .right-grid .assignment:hover .assignment-contents {
+  transform: scale(0.9);
+} */
+.right-grid .assignment h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: left;
+}
+.right-grid .assignment .assignment-contents p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.right-grid .assignment .assignment-contents {
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+.right-grid .assignment .assignment-contents button {
+  box-shadow: 0.2rem 0.5rem darkblue;
+  outline: 0.1rem solid white;
+  cursor: pointer;
+  display: block;
+}
+.right-grid .assignment .assignment-contents button:hover {
+  outline: 0.8rem solid yellow;
+  transform: scale(0.9);
+}
+/***************************************/
+/* This part is for pop-up window for each of assignment on the right side of the screen */
+/***************************************/
+.popup-cards {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.popup-cards .card {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: #fff1de;
+  position: relative;
+  margin: 2rem;
+  width: 70rem;
+  border-radius: 5%;
+}
+.popup-cards .card.active {
+  display: inline-block;
+}
+
+.popup-cards .card .fa-circle-xmark {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: #444;
+  font-size: 2rem;
+}
+.popup-cards .card .fa-circle-xmark:hover {
+  transform: rotate(90deg);
+}
+.popup-cards .card h4 {
+  padding: 0.5rem 0;
+}
+.popup-cards .card a:link {
+  text-decoration: none;
+  color: blue;
+}
+.popup-cards .card a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+.popup-cards .card a:visited {
+  text-decoration: none;
+  color: black;
+}
+.popup-cards .card p {
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #777;
+}
+.popup-cards .card img {
+  max-width: 100%;
+  height: auto;
+}
+/***************************************/
+/*Footer and Social Links Setup*/
+/***************************************/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 0.5rem;
+}
+.social-icons {
+  list-style: none;
+}
+.social-icons li {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.social-icons a {
+  text-decoration: none;
+  color: black;
+}
+.social-icons a i {
+  transition: color 0.4s ease;
+}
+.social-icons a:hover i {
+  color: pink;
+}
