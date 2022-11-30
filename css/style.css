@@ -96,7 +96,7 @@ nav {
   display: flex;*/
   border-radius: 5%;
   box-sizing: border-box;
-  height: clamp(25vh, 50vh, 60vh);
+  height: clamp(25vh 50vh 60vh);
   color: black;
   display: grid;
   padding: 1.5rem;
