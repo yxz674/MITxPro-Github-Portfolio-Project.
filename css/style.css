@@ -68,8 +68,8 @@ nav {
 
 .right-grid {
   display: grid;
-  overflow-y: auto;
-  /* background-image: url("./images/jon-tyson-6YQEhak4vpU-unsplash.jpg");
+  /*overflow-y: auto;
+  background-image: url("./images/jon-tyson-6YQEhak4vpU-unsplash.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; */
@@ -92,12 +92,14 @@ nav {
   background-color: #fff1de;
   /* box-shadow: 0.5rem 1rem darkblue;
   outline: 0.1rem solid white;
-  cursor: pointer; */
+  cursor: pointer; 
+  display: flex;*/
   border-radius: 5%;
   box-sizing: border-box;
-  height: clamp(250px, 450px, 600px);
+  height: clamp(25vh, 50vh, 60vh);
   color: black;
-  display: flex;
+  display: grid;
+  padding: 1.5rem;
 }
 /* .right-grid .assignment:hover {
   outline: 0.8rem solid yellow;
@@ -226,4 +228,23 @@ nav {
 }
 .social-icons a:hover i {
   color: pink;
+}
+/***************************************/
+/*Media Query Setup*/
+/***************************************/
+@media screen and (max-width: 975px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+
+  .right-grid {
+    grid-template-columns: 1fr;
+    height: 50%;
+    gap: 3rem;
+  }
+
+  .right-grid .assignment {
+    border-radius: 2.5%;
+    height:100%;
+  }
 }
